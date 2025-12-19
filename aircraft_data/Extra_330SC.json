@@ -1,0 +1,84 @@
+{
+  "name": "Extra 330SC",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 119.0,
+  "aspect_ratio": 6.0,
+  "CD0": 0.032,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 8.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 10.0, "negative": -5.0 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1850, 1950, 2095],
+      "speeds": [60, 62, 64]
+    },
+    "takeoff": {
+      "weights": [1850, 1950, 2095],
+      "speeds": [58, 60, 62]
+    },
+    "landing": {
+      "weights": [1850, 1950, 2095],
+      "speeds": [54, 56, 58]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 72,
+    "best_glide_ratio": 8.5
+  },
+  "engine_options": {
+    "Lycoming AEIO-580": {
+      "horsepower": 315,
+      "power_curve": {
+        "sea_level_max": 315,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 16000,
+  "Vne": 220,
+  "Vno": 170,
+  "Vfe": {
+    "takeoff": 100,
+    "landing": 85
+  },
+  "CL_max": {
+    "clean": 1.7,
+    "takeoff": 1.9,
+    "landing": 2.1
+  },
+  "arcs": {
+    "white": [54, 85],
+    "green": [60, 170],
+    "yellow": [170, 220],
+    "red": 220
+  },
+  "empty_weight": 1410,
+  "max_weight": 2095,
+  "seats": 1,
+  "cg_range": [78.01, 84.01],
+  "fuel_capacity_gal": 55,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 220
+  }
+}

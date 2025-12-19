@@ -1,0 +1,111 @@
+{
+  "name": "Cessna 172S",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 174.0,
+  "aspect_ratio": 7.32,
+  "CD0": 0.027,
+  "e": 0.8,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": {
+        "positive": 3.8,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "utility": {
+      "clean": {
+        "positive": 4.4,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "aerobatic": {
+      "clean": {
+        "positive": 6.0,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 0.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 0.0,
+        "negative": -1.0
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2000, 2300, 2550],
+      "speeds": [47, 50, 53]
+    },
+    "takeoff": {
+      "weights": [2000, 2300, 2550],
+      "speeds": [44, 47, 50]
+    },
+    "landing": {
+      "weights": [2000, 2300, 2550],
+      "speeds": [41, 44, 47]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 68,
+    "best_glide_ratio": 9.0
+  },
+  "engine_options": {
+    "Lycoming IO-360-L2A": {
+      "horsepower": 180,
+      "power_curve": {
+        "sea_level_max": 180,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 14000,
+  "Vne": 163,
+  "Vno": 129,
+  "Vfe": {
+    "takeoff": 110,
+    "landing": 85
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [41, 85],
+    "green": [47, 129],
+    "yellow": [129, 163],
+    "red": 163
+  },
+  "empty_weight": 1660,
+  "max_weight": 2550,
+  "seats": 4,
+  "cg_range": [35.01, 47.3],
+  "fuel_capacity_gal": 56,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 163
+  }
+}

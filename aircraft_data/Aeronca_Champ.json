@@ -1,0 +1,152 @@
+{
+  "name": "Aeronca Champ",
+  "type": "single_engine",
+  "gear_type": "fixed",
+  "engine_count": 1,
+  "wing_area": 170,
+  "aspect_ratio": 6.8,
+  "CD0": 0.03,
+  "e": 0.75,
+  "configuration_options": {
+    "flaps": [
+      "clean",
+      "takeoff",
+      "landing"
+    ]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": {
+        "positive": 3.8,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2,
+        "negative": -1
+      },
+      "landing": {
+        "positive": 2,
+        "negative": -1
+      }
+    },
+    "utility": {
+      "clean": {
+        "positive": 4.4,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2,
+        "negative": -1
+      },
+      "landing": {
+        "positive": 2,
+        "negative": -1
+      }
+    },
+    "aerobatic": {
+      "clean": {
+        "positive": 6,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 0,
+        "negative": -1
+      },
+      "landing": {
+        "positive": 0,
+        "negative": -1
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [
+        740,
+        1150,
+        1220
+      ],
+      "speeds": [
+        33,
+        36,
+        39
+      ]
+    },
+    "takeoff": {
+      "weights": [
+        740,
+        1150,
+        1220
+      ],
+      "speeds": [
+        32,
+        36,
+        38
+      ]
+    },
+    "landing": {
+      "weights": [
+        740,
+        1150,
+        1220
+      ],
+      "speeds": [
+        30,
+        35,
+        37
+      ]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 8.5
+  },
+  "engine_options": {
+    "Continental A-65": {
+      "horsepower": 65,
+      "power_curve": {
+        "sea_level_max": 65,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 12000,
+  "Vne": 122,
+  "Vno": 91,
+  "Vfe": {
+    "takeoff": 78,
+    "landing": 74
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [
+      30,
+      74
+    ],
+    "green": [
+      33,
+      91
+    ],
+    "yellow": [
+      91,
+      122
+    ],
+    "red": 122
+  },
+  "empty_weight": 740,
+  "max_weight": 1220,
+  "seats": 2,
+  "cg_range": [
+    14.01,
+    20.01
+  ],
+  "fuel_capacity_gal": 13,
+  "fuel_weight_per_gal": 6,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.4,
+    "V_max_kts": 122
+  }
+}

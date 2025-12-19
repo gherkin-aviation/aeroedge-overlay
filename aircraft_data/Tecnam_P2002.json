@@ -1,0 +1,84 @@
+{
+  "name": "Tecnam P2002",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 123.6,
+  "aspect_ratio": 7.8,
+  "CD0": 0.028,
+  "e": 0.8,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [815, 1050, 1320],
+      "speeds": [41, 44, 48]
+    },
+    "takeoff": {
+      "weights": [815, 1050, 1320],
+      "speeds": [39, 42, 45]
+    },
+    "landing": {
+      "weights": [815, 1050, 1320],
+      "speeds": [35, 39, 43]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 9.5
+  },
+  "engine_options": {
+    "Rotax 912ULS": {
+      "horsepower": 100,
+      "power_curve": {
+        "sea_level_max": 100,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 14000,
+  "Vne": 155,
+  "Vno": 120,
+  "Vfe": {
+    "takeoff": 90,
+    "landing": 75
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [35, 75],
+    "green": [41, 120],
+    "yellow": [120, 155],
+    "red": 155
+  },
+  "empty_weight": 815,
+  "max_weight": 1320,
+  "seats": 2,
+  "cg_range": [11.01, 15.5],
+  "fuel_capacity_gal": 26.4,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 155
+  }
+}

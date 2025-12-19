@@ -1,0 +1,84 @@
+{
+  "name": "Maule M-7",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 174.0,
+  "aspect_ratio": 6.2,
+  "CD0": 0.037,
+  "e": 0.77,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.5, "negative": -1.0 },
+      "landing": { "positive": 2.5, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.5, "negative": -1.0 },
+      "landing": { "positive": 2.5, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1600, 2500],
+      "speeds": [48, 54]
+    },
+    "takeoff": {
+      "weights": [1600, 2500],
+      "speeds": [45, 51]
+    },
+    "landing": {
+      "weights": [1600, 2500],
+      "speeds": [42, 48]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 65,
+    "best_glide_ratio": 9.0
+  },
+  "engine_options": {
+    "Lycoming IO-540": {
+      "horsepower": 235,
+      "power_curve": {
+        "sea_level_max": 235,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 18000,
+  "Vne": 158,
+  "Vno": 122,
+  "Vfe": {
+    "takeoff": 100,
+    "landing": 85
+  },
+  "CL_max": {
+    "clean": 1.6,
+    "takeoff": 1.8,
+    "landing": 2.0
+  },
+  "arcs": {
+    "white": [42, 85],
+    "green": [48, 122],
+    "yellow": [122, 158],
+    "red": 158
+  },
+  "empty_weight": 1600,
+  "max_weight": 2500,
+  "seats": 4,
+  "cg_range": [12.5, 17.5],
+  "fuel_capacity_gal": 73,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 158
+  }
+}

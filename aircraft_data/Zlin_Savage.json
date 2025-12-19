@@ -1,0 +1,84 @@
+{
+  "name": "Zlin Savage",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 161.0,
+  "aspect_ratio": 6.2,
+  "CD0": 0.035,
+  "e": 0.8,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1100, 1170, 1232],
+      "speeds": [42, 44, 46]
+    },
+    "takeoff": {
+      "weights": [1100, 1170, 1232],
+      "speeds": [39, 41, 43]
+    },
+    "landing": {
+      "weights": [1100, 1170, 1232],
+      "speeds": [35, 37, 39]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 9.5
+  },
+  "engine_options": {
+    "Rotax 912 ULS": {
+      "horsepower": 100,
+      "power_curve": {
+        "sea_level_max": 100,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 14000,
+  "Vne": 130,
+  "Vno": 108,
+  "Vfe": {
+    "takeoff": 85,
+    "landing": 74
+  },
+  "CL_max": {
+    "clean": 1.7,
+    "takeoff": 1.9,
+    "landing": 2.1
+  },
+  "arcs": {
+    "white": [35, 74],
+    "green": [42, 108],
+    "yellow": [108, 130],
+    "red": 130
+  },
+  "empty_weight": 725,
+  "max_weight": 1232,
+  "seats": 2,
+  "cg_range": [22.01, 30.01],
+  "fuel_capacity_gal": 22,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 130
+  }
+}

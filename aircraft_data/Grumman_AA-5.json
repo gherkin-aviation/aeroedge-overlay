@@ -1,0 +1,84 @@
+{
+  "name": "Grumman AA-5",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 143.0,
+  "aspect_ratio": 7.1,
+  "CD0": 0.027,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.2, "negative": -1.0 },
+      "landing": { "positive": 2.2, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1800, 2000, 2200],
+      "speeds": [53, 55, 58]
+    },
+    "takeoff": {
+      "weights": [1800, 2000, 2200],
+      "speeds": [51, 53, 56]
+    },
+    "landing": {
+      "weights": [1800, 2000, 2200],
+      "speeds": [47, 50, 53]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 72,
+    "best_glide_ratio": 9.2
+  },
+  "engine_options": {
+    "Lycoming O-320-E2G": {
+      "horsepower": 150,
+      "power_curve": {
+        "sea_level_max": 150,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 13500,
+  "Vne": 190,
+  "Vno": 135,
+  "Vfe": {
+    "takeoff": 103,
+    "landing": 96
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [47, 96],
+    "green": [53, 135],
+    "yellow": [135, 190],
+    "red": 190
+  },
+  "empty_weight": 1430,
+  "max_weight": 2200,
+  "seats": 4,
+  "cg_range": [9.01, 14.5],
+  "fuel_capacity_gal": 52,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 190
+  }
+}

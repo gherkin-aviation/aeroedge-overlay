@@ -1,0 +1,112 @@
+{
+  "name": "Cessna 210",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 174.0,
+  "aspect_ratio": 7.2,
+  "CD0": 0.028,
+  "e": 0.8,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": {
+        "positive": 3.8,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "utility": {
+      "clean": {
+        "positive": 4.4,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "aerobatic": {
+      "clean": {
+        "positive": 6.0,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 0.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 0.0,
+        "negative": -1.0
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2800, 3200, 3800],
+      "speeds": [59, 64, 68]
+    },
+    "takeoff": {
+      "weights": [2800, 3200, 3800],
+      "speeds": [55, 60, 64]
+    },
+    "landing": {
+      "weights": [2800, 3200, 3800],
+      "speeds": [51, 55, 60]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 78,
+    "best_glide_ratio": 9.2
+  },
+  "engine_options": {
+    "Continental IO-520-L": {
+      "horsepower": 300,
+      "power_curve": {
+        "sea_level_max": 300,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 18000,
+  "Vne": 200,
+  "Vno": 160,
+  "Vfe": {
+    "takeoff": 140,
+    "landing": 110
+  },
+  "CL_max": {
+    "clean": 1.45,
+    "takeoff": 1.65,
+    "landing": 1.85
+  },
+  "arcs": {
+    "white": [51, 110],
+    "green": [59, 160],
+    "yellow": [160, 200],
+    "red": 200
+  },
+  "empty_weight": 2300,
+  "max_weight": 3800,
+  "seats": 6,
+  "cg_range": [36.01, 47.3],
+  "fuel_capacity_gal": 90,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 200
+  }
+}

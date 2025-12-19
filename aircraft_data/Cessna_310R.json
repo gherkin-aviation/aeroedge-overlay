@@ -1,0 +1,153 @@
+{
+  "name": "Cessna 310R",
+  "type": "multi_engine",
+  "gear_type": "retractable",
+  "engine_count": 2,
+  "wing_area": 178.0,
+  "aspect_ratio": 6.3,
+  "CD0": 0.03,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [4000, 4750, 5500],
+      "speeds": [73, 78, 83]
+    },
+    "takeoff": {
+      "weights": [4000, 4750, 5500],
+      "speeds": [69, 74, 79]
+    },
+    "landing": {
+      "weights": [4000, 4750, 5500],
+      "speeds": [65, 70, 75]
+    }
+  },
+  "single_engine_limits": {
+    "Vmca": {
+      "clean_up": 76,
+      "takeoff_up": 74,
+      "landing_down": 72
+    },
+    "Vyse": {
+      "clean_up": 107,
+      "takeoff_up": 105,
+      "landing_down": 102
+    },
+    "Vxse": {
+      "clean_up": 95,
+      "takeoff_up": 92,
+      "landing_down": 90
+    },
+    "best_glide": 110,
+    "best_glide_ratio": 11.8
+  },
+  "engine_options": {
+    "Continental IO-520-M": {
+      "horsepower": 285,
+      "power_curve": {
+        "sea_level_max": 285,
+        "derate_per_1000ft": 0.03
+      },
+      "oei_performance": {
+        "clean_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 110,
+            "rate_of_climb_fpm": 230
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 105,
+            "rate_of_climb_fpm": 150
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 103,
+            "rate_of_climb_fpm": 90
+          }
+        },
+        "takeoff_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 105,
+            "rate_of_climb_fpm": 180
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 100,
+            "rate_of_climb_fpm": 120
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 98,
+            "rate_of_climb_fpm": 70
+          }
+        },
+        "landing_down": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 100,
+            "rate_of_climb_fpm": 140
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 95,
+            "rate_of_climb_fpm": 80
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 93,
+            "rate_of_climb_fpm": 40
+          }
+        }
+      }
+    }
+  },
+  "max_altitude": 20000,
+  "Vne": 223,
+  "Vno": 174,
+  "Vfe": {
+    "takeoff": 143,
+    "landing": 112
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [65, 112],
+    "green": [73, 174],
+    "yellow": [174, 223],
+    "red": 223
+  },
+  "empty_weight": 3346,
+  "max_weight": 5500,
+  "seats": 6,
+  "cg_range": [136.01, 146.01],
+  "fuel_capacity_gal": 163,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 223
+  }
+}

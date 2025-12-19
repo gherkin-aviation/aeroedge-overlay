@@ -1,0 +1,85 @@
+{
+  "name": "Zlin Z-242L",
+  "type": "single_engine",
+  "gear_type": "fixed",
+  "engine_count": 1,
+  "wing_area": 135.6,
+  "aspect_ratio": 7.3,
+  "CD0": 0.03,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1900, 2000, 2095],
+      "speeds": [58, 60, 62]
+    },
+    "takeoff": {
+      "weights": [1900, 2000, 2095],
+      "speeds": [55, 57, 59]
+    },
+    "landing": {
+      "weights": [1900, 2000, 2095],
+      "speeds": [51, 53, 55]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 72,
+    "best_glide_ratio": 9.0
+  },
+  "engine_options": {
+    "Lycoming AEIO-360": {
+      "horsepower": 200,
+      "power_curve": {
+        "sea_level_max": 200,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 16000,
+  "Vne": 216,
+  "Vno": 164,
+  "Vfe": {
+    "takeoff": 100,
+    "landing": 89
+  },
+  "CL_max": {
+    "clean": 1.6,
+    "takeoff": 1.8,
+    "landing": 2.0
+  },
+  "arcs": {
+    "white": [51, 89],
+    "green": [58, 164],
+    "yellow": [164, 216],
+    "red": 216
+  },
+  "empty_weight": 1600,
+  "max_weight": 2095,
+  "seats": 2,
+  "cg_range": [85.01, 94.01],
+  "fuel_capacity_gal": 36,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 216
+  }
+}

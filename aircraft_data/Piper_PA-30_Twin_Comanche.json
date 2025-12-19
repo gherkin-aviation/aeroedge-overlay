@@ -1,0 +1,153 @@
+{
+  "name": "Piper PA-30 Twin Comanche",
+  "type": "multi_engine",
+  "gear_type": "retractable",
+  "engine_count": 2,
+  "wing_area": 183.1,
+  "aspect_ratio": 7.0,
+  "CD0": 0.03,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2800, 3200, 3600],
+      "speeds": [70, 75, 79]
+    },
+    "takeoff": {
+      "weights": [2800, 3200, 3600],
+      "speeds": [66, 71, 75]
+    },
+    "landing": {
+      "weights": [2800, 3200, 3600],
+      "speeds": [63, 68, 72]
+    }
+  },
+  "single_engine_limits": {
+    "Vmca": {
+      "clean_up": 72,
+      "takeoff_up": 70,
+      "landing_down": 68
+    },
+    "Vyse": {
+      "clean_up": 106,
+      "takeoff_up": 104,
+      "landing_down": 100
+    },
+    "Vxse": {
+      "clean_up": 91,
+      "takeoff_up": 89,
+      "landing_down": 86
+    },
+    "best_glide": 105,
+    "best_glide_ratio": 9.5
+  },
+  "engine_options": {
+    "Lycoming IO-320-B1A": {
+      "horsepower": 160,
+      "power_curve": {
+        "sea_level_max": 160,
+        "derate_per_1000ft": 0.03
+      },
+      "oei_performance": {
+        "clean_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 105,
+            "rate_of_climb_fpm": 220
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 100,
+            "rate_of_climb_fpm": 140
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 98,
+            "rate_of_climb_fpm": 90
+          }
+        },
+        "takeoff_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 100,
+            "rate_of_climb_fpm": 200
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 95,
+            "rate_of_climb_fpm": 120
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 93,
+            "rate_of_climb_fpm": 70
+          }
+        },
+        "landing_down": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 95,
+            "rate_of_climb_fpm": 160
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 90,
+            "rate_of_climb_fpm": 100
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 88,
+            "rate_of_climb_fpm": 60
+          }
+        }
+      }
+    }
+  },
+  "max_altitude": 20000,
+  "Vne": 224,
+  "Vno": 185,
+  "Vfe": {
+    "takeoff": 125,
+    "landing": 107
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [63, 107],
+    "green": [70, 185],
+    "yellow": [185, 224],
+    "red": 224
+  },
+  "empty_weight": 2270,
+  "max_weight": 3600,
+  "seats": 4,
+  "cg_range": [133.01, 142.01],
+  "fuel_capacity_gal": 120,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 224
+  }
+}

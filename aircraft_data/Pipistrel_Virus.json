@@ -1,0 +1,84 @@
+{
+  "name": "Pipistrel Virus",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 103.0,
+  "aspect_ratio": 10.5,
+  "CD0": 0.028,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [900, 1100, 1320],
+      "speeds": [44, 47, 50]
+    },
+    "takeoff": {
+      "weights": [900, 1100, 1320],
+      "speeds": [42, 45, 48]
+    },
+    "landing": {
+      "weights": [900, 1100, 1320],
+      "speeds": [40, 43, 46]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 9.5
+  },
+  "engine_options": {
+    "Rotax 912 ULS": {
+      "horsepower": 100,
+      "power_curve": {
+        "sea_level_max": 100,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 16000,
+  "Vne": 160,
+  "Vno": 130,
+  "Vfe": {
+    "takeoff": 80,
+    "landing": 70
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [40, 70],
+    "green": [44, 130],
+    "yellow": [130, 160],
+    "red": 160
+  },
+  "empty_weight": 705,
+  "max_weight": 1320,
+  "seats": 2,
+  "cg_range": [10.01, 15.01],
+  "fuel_capacity_gal": 26.4,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 160
+  }
+}

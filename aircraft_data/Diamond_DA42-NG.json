@@ -1,0 +1,153 @@
+{
+  "name": "Diamond DA42-NG",
+  "type": "multi_engine",
+  "gear_type": "retractable",
+  "engine_count": 2,
+  "wing_area": 175.0,
+  "aspect_ratio": 11.5,
+  "CD0": 0.027,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2870, 3600, 4189],
+      "speeds": [68, 72, 75]
+    },
+    "takeoff": {
+      "weights": [2870, 3600, 4189],
+      "speeds": [65, 69, 72]
+    },
+    "landing": {
+      "weights": [2870, 3600, 4189],
+      "speeds": [61, 65, 68]
+    }
+  },
+  "single_engine_limits": {
+    "Vmca": {
+      "clean_up": 68,
+      "takeoff_up": 66,
+      "landing_down": 64
+    },
+    "Vyse": {
+      "clean_up": 85,
+      "takeoff_up": 82,
+      "landing_down": 78
+    },
+    "Vxse": {
+      "clean_up": 82,
+      "takeoff_up": 80,
+      "landing_down": 76
+    },
+    "best_glide": 88,
+    "best_glide_ratio": 10.2
+  },
+  "engine_options": {
+    "Austro AE300": {
+      "horsepower": 170,
+      "power_curve": {
+        "sea_level_max": 170,
+        "derate_per_1000ft": 0.03
+      },
+      "oei_performance": {
+        "clean_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 88,
+            "rate_of_climb_fpm": 240
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 82,
+            "rate_of_climb_fpm": 180
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 78,
+            "rate_of_climb_fpm": 120
+          }
+        },
+        "takeoff_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 82,
+            "rate_of_climb_fpm": 200
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 76,
+            "rate_of_climb_fpm": 140
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 74,
+            "rate_of_climb_fpm": 80
+          }
+        },
+        "landing_down": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 78,
+            "rate_of_climb_fpm": 160
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 72,
+            "rate_of_climb_fpm": 100
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 70,
+            "rate_of_climb_fpm": 50
+          }
+        }
+      }
+    }
+  },
+  "max_altitude": 18000,
+  "Vne": 194,
+  "Vno": 155,
+  "Vfe": {
+    "takeoff": 137,
+    "landing": 111
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [61, 111],
+    "green": [68, 155],
+    "yellow": [155, 194],
+    "red": 194
+  },
+  "empty_weight": 2870,
+  "max_weight": 4189,
+  "seats": 4,
+  "cg_range": [11.5, 15.5],
+  "fuel_capacity_gal": 76,
+  "fuel_weight_per_gal": 6.7,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 194
+  }
+}

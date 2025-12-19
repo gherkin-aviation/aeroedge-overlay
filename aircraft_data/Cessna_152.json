@@ -1,0 +1,111 @@
+{
+  "name": "Cessna 152",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 160.0,
+  "aspect_ratio": 7.3,
+  "CD0": 0.028,
+  "e": 0.8,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": {
+        "positive": 3.8,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "utility": {
+      "clean": {
+        "positive": 4.4,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "aerobatic": {
+      "clean": {
+        "positive": 6.0,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 0.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 0.0,
+        "negative": -1.0
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1300, 1500, 1670],
+      "speeds": [44, 47, 50]
+    },
+    "takeoff": {
+      "weights": [1300, 1500, 1670],
+      "speeds": [40, 43, 46]
+    },
+    "landing": {
+      "weights": [1300, 1500, 1670],
+      "speeds": [38, 41, 44]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 9.0
+  },
+  "engine_options": {
+    "Lycoming O-235-L2C": {
+      "horsepower": 110,
+      "power_curve": {
+        "sea_level_max": 110,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 14400,
+  "Vne": 149,
+  "Vno": 111,
+  "Vfe": {
+    "takeoff": 85,
+    "landing": 85
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [38, 85],
+    "green": [44, 111],
+    "yellow": [111, 149],
+    "red": 149
+  },
+  "empty_weight": 1125,
+  "max_weight": 1670,
+  "seats": 2,
+  "cg_range": [32.01, 36.5],
+  "fuel_capacity_gal": 26,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 149
+  }
+}

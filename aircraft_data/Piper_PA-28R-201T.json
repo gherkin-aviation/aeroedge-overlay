@@ -1,0 +1,85 @@
+{
+  "name": "Piper PA-28R-201T",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 170.0,
+  "aspect_ratio": 7.2,
+  "CD0": 0.027,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1850, 2500, 2900],
+      "speeds": [56, 60, 64]
+    },
+    "takeoff": {
+      "weights": [1850, 2500, 2900],
+      "speeds": [52, 56, 59]
+    },
+    "landing": {
+      "weights": [1850, 2500, 2900],
+      "speeds": [48, 52, 56]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 72,
+    "best_glide_ratio": 9.2
+  },
+  "engine_options": {
+    "Continental TSIO-360-FB": {
+      "horsepower": 200,
+      "power_curve": {
+        "sea_level_max": 200,
+        "derate_per_1000ft": 0.02
+      }
+    }
+  },
+  "max_altitude": 20000,
+  "Vne": 196,
+  "Vno": 154,
+  "Vfe": {
+    "takeoff": 103,
+    "landing": 89
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [48, 89],
+    "green": [56, 154],
+    "yellow": [154, 196],
+    "red": 196
+  },
+  "empty_weight": 1850,
+  "max_weight": 2900,
+  "seats": 4,
+  "cg_range": [84.1, 93.01],
+  "fuel_capacity_gal": 72,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 196
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "name": "Evektor SportStar",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 131.3,
+  "aspect_ratio": 8.5,
+  "CD0": 0.026,
+  "e": 0.78,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.2, "negative": -1.0 },
+      "landing": { "positive": 2.2, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1000, 1150, 1320],
+      "speeds": [40, 43, 45]
+    },
+    "takeoff": {
+      "weights": [1000, 1150, 1320],
+      "speeds": [38, 41, 43]
+    },
+    "landing": {
+      "weights": [1000, 1150, 1320],
+      "speeds": [36, 39, 41]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 9.2
+  },
+  "engine_options": {
+    "Rotax 912 ULS": {
+      "horsepower": 100,
+      "power_curve": {
+        "sea_level_max": 100,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 15000,
+  "Vne": 138,
+  "Vno": 108,
+  "Vfe": {
+    "takeoff": 75,
+    "landing": 65
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [36, 65],
+    "green": [40, 108],
+    "yellow": [108, 138],
+    "red": 138
+  },
+  "empty_weight": 738,
+  "max_weight": 1320,
+  "seats": 2,
+  "cg_range": [21.6, 26.2],
+  "fuel_capacity_gal": 27,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 138
+  }
+}

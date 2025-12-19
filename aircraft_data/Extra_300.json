@@ -1,0 +1,84 @@
+{
+  "name": "Extra 300",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 112.3,
+  "aspect_ratio": 6.1,
+  "CD0": 0.03,
+  "e": 0.77,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 4.0, "negative": -1.0 },
+      "landing": { "positive": 4.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 4.0, "negative": -1.0 },
+      "landing": { "positive": 4.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 10.0, "negative": -5.0 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1500, 1800, 2095],
+      "speeds": [60, 64, 67]
+    },
+    "takeoff": {
+      "weights": [1500, 1800, 2095],
+      "speeds": [58, 62, 65]
+    },
+    "landing": {
+      "weights": [1500, 1800, 2095],
+      "speeds": [56, 60, 63]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 70,
+    "best_glide_ratio": 8.5
+  },
+  "engine_options": {
+    "Lycoming AEIO-540-L1B5": {
+      "horsepower": 300,
+      "power_curve": {
+        "sea_level_max": 300,
+        "derate_per_1000ft": 0.025
+      }
+    }
+  },
+  "max_altitude": 16000,
+  "Vne": 220,
+  "Vno": 180,
+  "Vfe": {
+    "takeoff": 140,
+    "landing": 120
+  },
+  "CL_max": {
+    "clean": 1.6,
+    "takeoff": 1.8,
+    "landing": 2.0
+  },
+  "arcs": {
+    "white": [56, 120],
+    "green": [60, 180],
+    "yellow": [180, 220],
+    "red": 220
+  },
+  "empty_weight": 1470,
+  "max_weight": 2095,
+  "seats": 2,
+  "cg_range": [17.01, 23.01],
+  "fuel_capacity_gal": 41,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 220
+  }
+}

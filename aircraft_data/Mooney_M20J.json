@@ -1,0 +1,85 @@
+{
+  "name": "Mooney M20J",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 175.0,
+  "aspect_ratio": 7.5,
+  "CD0": 0.03,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.5, "negative": -1.0 },
+      "landing": { "positive": 2.5, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.5, "negative": -1.0 },
+      "landing": { "positive": 2.5, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2000, 2740],
+      "speeds": [58, 63]
+    },
+    "takeoff": {
+      "weights": [2000, 2740],
+      "speeds": [55, 60]
+    },
+    "landing": {
+      "weights": [2000, 2740],
+      "speeds": [52, 58]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 73,
+    "best_glide_ratio": 10.5
+  },
+  "engine_options": {
+    "Lycoming IO-360-A3B6D": {
+      "horsepower": 200,
+      "power_curve": {
+        "sea_level_max": 200,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 18000,
+  "Vne": 195,
+  "Vno": 143,
+  "Vfe": {
+    "takeoff": 110,
+    "landing": 105
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [52, 105],
+    "green": [58, 143],
+    "yellow": [143, 195],
+    "red": 195
+  },
+  "empty_weight": 1650,
+  "max_weight": 2740,
+  "seats": 4,
+  "cg_range": [42.01, 48.01],
+  "fuel_capacity_gal": 64,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 195
+  }
+}

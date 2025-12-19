@@ -1,0 +1,112 @@
+{
+  "name": "Beechcraft Sundowner",
+  "type": "single_engine",
+  "gear_type": "fixed",
+  "engine_count": 1,
+  "wing_area": 181.0,
+  "aspect_ratio": 6.8,
+  "CD0": 0.032,
+  "e": 0.8,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": {
+        "positive": 3.8,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "utility": {
+      "clean": {
+        "positive": 4.4,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "aerobatic": {
+      "clean": {
+        "positive": 6.0,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 0.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 0.0,
+        "negative": -1.0
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1525, 2200, 2450],
+      "speeds": [54, 59, 64]
+    },
+    "takeoff": {
+      "weights": [1525, 2200, 2450],
+      "speeds": [52, 57, 62]
+    },
+    "landing": {
+      "weights": [1525, 2200, 2450],
+      "speeds": [49, 54, 59]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 70,
+    "best_glide_ratio": 9.0
+  },
+  "engine_options": {
+    "Lycoming O-320-E2D": {
+      "horsepower": 160,
+      "power_curve": {
+        "sea_level_max": 160,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 13500,
+  "Vne": 179,
+  "Vno": 132,
+  "Vfe": {
+    "takeoff": 110,
+    "landing": 103
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [49, 103],
+    "green": [54, 132],
+    "yellow": [132, 179],
+    "red": 179
+  },
+  "empty_weight": 1525,
+  "max_weight": 2450,
+  "seats": 4,
+  "cg_range": [84.01, 91.6],
+  "fuel_capacity_gal": 57,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 179
+  }
+}

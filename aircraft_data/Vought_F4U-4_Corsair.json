@@ -1,0 +1,85 @@
+{
+  "name": "Vought F4U-4 Corsair",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 314.0,
+  "aspect_ratio": 5.4,
+  "CD0": 0.018,
+  "e": 0.83,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 8.0, "negative": -4.0 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [12000, 13500, 14670],
+      "speeds": [95, 100, 105]
+    },
+    "takeoff": {
+      "weights": [12000, 13500, 14670],
+      "speeds": [92, 97, 102]
+    },
+    "landing": {
+      "weights": [12000, 13500, 14670],
+      "speeds": [85, 90, 95]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 150,
+    "best_glide_ratio": 10.0
+  },
+  "engine_options": {
+    "Pratt & Whitney R-2800-18W": {
+      "horsepower": 2450,
+      "power_curve": {
+        "sea_level_max": 2450,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 41500,
+  "Vne": 446,
+  "Vno": 380,
+  "Vfe": {
+    "takeoff": 165,
+    "landing": 150
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [85, 150],
+    "green": [95, 380],
+    "yellow": [380, 446],
+    "red": 446
+  },
+  "empty_weight": 9205,
+  "max_weight": 14670,
+  "seats": 1,
+  "cg_range": [92.0, 100.0],
+  "fuel_capacity_gal": 534,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 446
+  }
+}

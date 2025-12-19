@@ -1,0 +1,85 @@
+{
+  "name": "Mooney M20R",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 175.0,
+  "aspect_ratio": 7.4,
+  "CD0": 0.032,
+  "e": 0.83,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.5, "negative": -1.0 },
+      "landing": { "positive": 2.5, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.5, "negative": -1.0 },
+      "landing": { "positive": 2.5, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2500, 3200],
+      "speeds": [62, 68]
+    },
+    "takeoff": {
+      "weights": [2500, 3200],
+      "speeds": [59, 66]
+    },
+    "landing": {
+      "weights": [2500, 3200],
+      "speeds": [56, 63]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 80,
+    "best_glide_ratio": 11.4
+  },
+  "engine_options": {
+    "Continental IO-550-G": {
+      "horsepower": 280,
+      "power_curve": {
+        "sea_level_max": 280,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 20000,
+  "Vne": 200,
+  "Vno": 165,
+  "Vfe": {
+    "takeoff": 120,
+    "landing": 110
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [56, 110],
+    "green": [62, 165],
+    "yellow": [165, 200],
+    "red": 200
+  },
+  "empty_weight": 2100,
+  "max_weight": 3368,
+  "seats": 4,
+  "cg_range": [44.01, 52.01],
+  "fuel_capacity_gal": 100,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 200
+  }
+}

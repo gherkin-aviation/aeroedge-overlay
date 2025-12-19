@@ -1,0 +1,84 @@
+{
+  "name": "Cirrus SR22T",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 144.9,
+  "aspect_ratio": 8.1,
+  "CD0": 0.028,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2340, 2900, 3600],
+      "speeds": [61, 66, 71]
+    },
+    "takeoff": {
+      "weights": [2340, 2900, 3600],
+      "speeds": [59, 63, 68]
+    },
+    "landing": {
+      "weights": [2340, 2900, 3600],
+      "speeds": [56, 60, 65]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 78,
+    "best_glide_ratio": 9.5
+  },
+  "engine_options": {
+    "Continental TSIO-550-K": {
+      "horsepower": 315,
+      "power_curve": {
+        "sea_level_max": 315,
+        "derate_per_1000ft": 0.01
+      }
+    }
+  },
+  "max_altitude": 25000,
+  "Vne": 205,
+  "Vno": 178,
+  "Vfe": {
+    "takeoff": 119,
+    "landing": 104
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [56, 104],
+    "green": [61, 178],
+    "yellow": [178, 205],
+    "red": 205
+  },
+  "empty_weight": 2340,
+  "max_weight": 3600,
+  "seats": 4,
+  "cg_range": [13.01, 18.1],
+  "fuel_capacity_gal": 92,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 205
+  }
+}

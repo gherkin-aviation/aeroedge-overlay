@@ -1,0 +1,85 @@
+{
+  "name": "Yakovlev Yak-3",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 173.3,
+  "aspect_ratio": 6.0,
+  "CD0": 0.030,
+  "e": 0.78,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 5.5, "negative": -2.0 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 6.0, "negative": -2.2 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.5, "negative": -2.5 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [5600, 6400, 6900],
+      "speeds": [78, 83, 87]
+    },
+    "takeoff": {
+      "weights": [5600, 6400, 6900],
+      "speeds": [76, 81, 85]
+    },
+    "landing": {
+      "weights": [5600, 6400, 6900],
+      "speeds": [73, 78, 82]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 110,
+    "best_glide_ratio": 10.5
+  },
+  "engine_options": {
+    "Klimov VK-105PF2": {
+      "horsepower": 1300,
+      "power_curve": {
+        "sea_level_max": 1300,
+        "derate_per_1000ft": 0.035
+      }
+    }
+  },
+  "max_altitude": 35000,
+  "Vne": 435,
+  "Vno": 375,
+  "Vfe": {
+    "takeoff": 165,
+    "landing": 150
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [73, 150],
+    "green": [78, 375],
+    "yellow": [375, 435],
+    "red": 435
+  },
+  "empty_weight": 4900,
+  "max_weight": 6900,
+  "seats": 1,
+  "cg_range": [85.0, 93.0],
+  "fuel_capacity_gal": 105,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.5,
+    "V_max_kts": 380
+  }
+}

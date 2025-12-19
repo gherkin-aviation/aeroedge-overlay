@@ -1,0 +1,85 @@
+{
+  "name": "Mitsubishi A6M5 Zero",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 242.0,
+  "aspect_ratio": 6.0,
+  "CD0": 0.032,
+  "e": 0.78,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 5.0, "negative": -1.7 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -2.0 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [5000, 6000, 6800],
+      "speeds": [63, 67, 70]
+    },
+    "takeoff": {
+      "weights": [5000, 6000, 6800],
+      "speeds": [61, 65, 68]
+    },
+    "landing": {
+      "weights": [5000, 6000, 6800],
+      "speeds": [59, 63, 66]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 95,
+    "best_glide_ratio": 11.0
+  },
+  "engine_options": {
+    "Nakajima Sakae 21": {
+      "horsepower": 1130,
+      "power_curve": {
+        "sea_level_max": 1130,
+        "derate_per_1000ft": 0.028
+      }
+    }
+  },
+  "max_altitude": 37000,
+  "Vne": 410,
+  "Vno": 340,
+  "Vfe": {
+    "takeoff": 180,
+    "landing": 160
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [59, 160],
+    "green": [63, 340],
+    "yellow": [340, 410],
+    "red": 410
+  },
+  "empty_weight": 3860,
+  "max_weight": 6800,
+  "seats": 1,
+  "cg_range": [60.0, 68.0],
+  "fuel_capacity_gal": 105,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.5,
+    "V_max_kts": 356
+  }
+}

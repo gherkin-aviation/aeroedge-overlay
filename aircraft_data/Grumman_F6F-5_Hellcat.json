@@ -1,0 +1,85 @@
+{
+  "name": "Grumman F6F-5 Hellcat",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 334.0,
+  "aspect_ratio": 5.0,
+  "CD0": 0.032,
+  "e": 0.75,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 5.5, "negative": -2.0 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 6.0, "negative": -2.2 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.5, "negative": -2.5 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [11000, 13000, 15000],
+      "speeds": [84, 91, 97]
+    },
+    "takeoff": {
+      "weights": [11000, 13000, 15000],
+      "speeds": [81, 88, 94]
+    },
+    "landing": {
+      "weights": [11000, 13000, 15000],
+      "speeds": [79, 86, 92]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 110,
+    "best_glide_ratio": 11.0
+  },
+  "engine_options": {
+    "Pratt & Whitney R-2800-10W": {
+      "horsepower": 2000,
+      "power_curve": {
+        "sea_level_max": 2000,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 37000,
+  "Vne": 460,
+  "Vno": 390,
+  "Vfe": {
+    "takeoff": 180,
+    "landing": 160
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [79, 160],
+    "green": [84, 390],
+    "yellow": [390, 460],
+    "red": 460
+  },
+  "empty_weight": 9040,
+  "max_weight": 15000,
+  "seats": 1,
+  "cg_range": [88.0, 96.0],
+  "fuel_capacity_gal": 250,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.7,
+    "V_max_kts": 395
+  }
+}

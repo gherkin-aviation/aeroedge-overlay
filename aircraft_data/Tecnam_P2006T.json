@@ -1,0 +1,153 @@
+{
+  "name": "Tecnam P2006T",
+  "type": "multi_engine",
+  "gear_type": "retractable",
+  "engine_count": 2,
+  "wing_area": 140.0,
+  "aspect_ratio": 8.0,
+  "CD0": 0.028,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1800, 2200, 2712],
+      "speeds": [57, 60, 63]
+    },
+    "takeoff": {
+      "weights": [1800, 2200, 2712],
+      "speeds": [54, 58, 61]
+    },
+    "landing": {
+      "weights": [1800, 2200, 2712],
+      "speeds": [49, 54, 58]
+    }
+  },
+  "single_engine_limits": {
+    "Vmca": {
+      "clean_up": 65,
+      "takeoff_up": 65,
+      "landing_down": 65
+    },
+    "Vyse": {
+      "clean_up": 78,
+      "takeoff_up": 78,
+      "landing_down": 78
+    },
+    "Vxse": {
+      "clean_up": 73,
+      "takeoff_up": 73,
+      "landing_down": 73
+    },
+    "best_glide": 79,
+    "best_glide_ratio": 9.5
+  },
+  "engine_options": {
+    "Rotax 912S3": {
+      "horsepower": 100,
+      "power_curve": {
+        "sea_level_max": 100,
+        "derate_per_1000ft": 0.03
+      },
+      "oei_performance": {
+        "clean_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 79,
+            "rate_of_climb_fpm": 240
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 73,
+            "rate_of_climb_fpm": 180
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 70,
+            "rate_of_climb_fpm": 120
+          }
+        },
+        "takeoff_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 76,
+            "rate_of_climb_fpm": 210
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 71,
+            "rate_of_climb_fpm": 150
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 68,
+            "rate_of_climb_fpm": 90
+          }
+        },
+        "landing_down": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 72,
+            "rate_of_climb_fpm": 160
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 68,
+            "rate_of_climb_fpm": 100
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 65,
+            "rate_of_climb_fpm": 60
+          }
+        }
+      }
+    }
+  },
+  "max_altitude": 14000,
+  "Vne": 160,
+  "Vno": 135,
+  "Vfe": {
+    "takeoff": 95,
+    "landing": 85
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [49, 85],
+    "green": [57, 135],
+    "yellow": [135, 160],
+    "red": 160
+  },
+  "empty_weight": 1675,
+  "max_weight": 2712,
+  "seats": 4,
+  "cg_range": [11.5, 16.01],
+  "fuel_capacity_gal": 52,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 160
+  }
+}

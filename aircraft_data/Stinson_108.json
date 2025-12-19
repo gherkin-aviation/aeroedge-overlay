@@ -1,0 +1,84 @@
+{
+  "name": "Stinson 108",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 213,
+  "aspect_ratio": 6.5,
+  "CD0": 0.035,
+  "e": 0.78,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1500, 2300],
+      "speeds": [48, 55]
+    },
+    "takeoff": {
+      "weights": [1500, 2300],
+      "speeds": [46, 52]
+    },
+    "landing": {
+      "weights": [1500, 2300],
+      "speeds": [43, 50]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 65,
+    "best_glide_ratio": 8.5
+  },
+  "engine_options": {
+    "Franklin 6A4-150-B3": {
+      "horsepower": 150,
+      "power_curve": {
+        "sea_level_max": 150,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 14500,
+  "Vne": 162,
+  "Vno": 129,
+  "Vfe": {
+    "takeoff": 110,
+    "landing": 95
+  },
+  "CL_max": {
+    "clean": 1.6,
+    "takeoff": 1.75,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [43, 95],
+    "green": [48, 129],
+    "yellow": [129, 162],
+    "red": 162
+  },
+  "empty_weight": 1320,
+  "max_weight": 2300,
+  "seats": 4,
+  "cg_range": [33.01, 42.01],
+  "fuel_capacity_gal": 50,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 162
+  }
+}

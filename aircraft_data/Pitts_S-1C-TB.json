@@ -1,0 +1,86 @@
+{
+  "name": "Pitts S-1C-TB",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 98,
+  "aspect_ratio": 5.2,
+  "CD0": 0.035,
+  "e": 0.65,
+  "configuration_options": {
+    "flaps": [
+      "clean",
+      "takeoff",
+      "landing"
+    ]
+  },
+  "G_limits": {
+    "aerobatic": {
+      "clean": {
+        "positive": 6,
+        "negative": -3
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [
+        850,
+        900,
+        1150
+      ],
+      "speeds": [
+        56,
+        58,
+        61
+      ]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 70,
+    "best_glide_ratio": 6.2
+  },
+  "engine_options": {
+    "Lycoming O-360 HCP": {
+      "horsepower": 220,
+      "power_curve": {
+        "sea_level_max": 220,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 18000,
+  "Vne": 174,
+  "Vno": 139,
+  "Vfe": {},
+  "CL_max": {
+    "clean": 1.35
+  },
+  "arcs": {
+    "white": [
+      null,
+      null
+    ],
+    "green": [
+      null,
+      null
+    ],
+    "yellow": [
+      null,
+      null
+    ],
+    "red": null
+  },
+  "empty_weight": 777,
+  "max_weight": 1150,
+  "seats": 1,
+  "cg_range": [
+    52,
+    58
+  ],
+  "fuel_capacity_gal": 19,
+  "fuel_weight_per_gal": 6,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.4,
+    "V_max_kts": 155
+  }
+}

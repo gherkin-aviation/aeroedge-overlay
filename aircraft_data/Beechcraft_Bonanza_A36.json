@@ -1,0 +1,112 @@
+{
+  "name": "Beechcraft Bonanza A36",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 181.0,
+  "aspect_ratio": 7.0,
+  "CD0": 0.027,
+  "e": 0.8,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": {
+        "positive": 3.8,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "utility": {
+      "clean": {
+        "positive": 4.4,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "aerobatic": {
+      "clean": {
+        "positive": 6.0,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 0.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 0.0,
+        "negative": -1.0
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2350, 3000, 3650],
+      "speeds": [62, 67, 73]
+    },
+    "takeoff": {
+      "weights": [2350, 3000, 3650],
+      "speeds": [60, 65, 70]
+    },
+    "landing": {
+      "weights": [2350, 3000, 3650],
+      "speeds": [56, 61, 66]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 95,
+    "best_glide_ratio": 10.5
+  },
+  "engine_options": {
+    "Continental IO-550-B": {
+      "horsepower": 300,
+      "power_curve": {
+        "sea_level_max": 300,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 18300,
+  "Vne": 205,
+  "Vno": 169,
+  "Vfe": {
+    "takeoff": 152,
+    "landing": 122
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [56, 122],
+    "green": [62, 169],
+    "yellow": [169, 205],
+    "red": 205
+  },
+  "empty_weight": 2350,
+  "max_weight": 3650,
+  "seats": 6,
+  "cg_range": [81.01, 87.7],
+  "fuel_capacity_gal": 74,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 205
+  }
+}

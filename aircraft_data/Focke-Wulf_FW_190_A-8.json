@@ -1,0 +1,85 @@
+{
+  "name": "Focke-Wulf Fw 190 A-8",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 197.0,
+  "aspect_ratio": 6.0,
+  "CD0": 0.032,
+  "e": 0.77,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 5.5, "negative": -2.0 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 6.0, "negative": -2.2 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.5, "negative": -2.5 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [8000, 9000, 9800],
+      "speeds": [94, 98, 103]
+    },
+    "takeoff": {
+      "weights": [8000, 9000, 9800],
+      "speeds": [90, 95, 100]
+    },
+    "landing": {
+      "weights": [8000, 9000, 9800],
+      "speeds": [88, 93, 98]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 125,
+    "best_glide_ratio": 10.2
+  },
+  "engine_options": {
+    "BMW 801 D-2": {
+      "horsepower": 1700,
+      "power_curve": {
+        "sea_level_max": 1700,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 37000,
+  "Vne": 467,
+  "Vno": 400,
+  "Vfe": {
+    "takeoff": 170,
+    "landing": 160
+  },
+  "CL_max": {
+    "clean": 1.45,
+    "takeoff": 1.65,
+    "landing": 1.85
+  },
+  "arcs": {
+    "white": [88, 160],
+    "green": [94, 400],
+    "yellow": [400, 467],
+    "red": 467
+  },
+  "empty_weight": 7300,
+  "max_weight": 9800,
+  "seats": 1,
+  "cg_range": [85.0, 93.0],
+  "fuel_capacity_gal": 115,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 410
+  }
+}

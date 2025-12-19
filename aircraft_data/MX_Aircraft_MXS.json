@@ -1,0 +1,84 @@
+{
+  "name": "MX Aircraft MXS",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 114.0,
+  "aspect_ratio": 5.7,
+  "CD0": 0.032,
+  "e": 0.83,
+  "configuration_options": {
+    "flaps": ["clean", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 8.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 12.0, "negative": -5.0 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1650, 1750, 1850],
+      "speeds": [62, 64, 66]
+    },
+    "takeoff": {
+      "weights": [1650, 1750, 1850],
+      "speeds": [60, 62, 64]
+    },
+    "landing": {
+      "weights": [1650, 1750, 1850],
+      "speeds": [56, 58, 60]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 75,
+    "best_glide_ratio": 8.0
+  },
+  "engine_options": {
+    "Lycoming AEIO-540": {
+      "horsepower": 350,
+      "power_curve": {
+        "sea_level_max": 350,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 16000,
+  "Vne": 275,
+  "Vno": 185,
+  "Vfe": {
+    "takeoff": 100,
+    "landing": 85
+  },
+  "CL_max": {
+    "clean": 1.7,
+    "takeoff": 1.9,
+    "landing": 2.1
+  },
+  "arcs": {
+    "white": [56, 85],
+    "green": [62, 185],
+    "yellow": [185, 275],
+    "red": 275
+  },
+  "empty_weight": 1235,
+  "max_weight": 1850,
+  "seats": 1,
+  "cg_range": [78.01, 84.01],
+  "fuel_capacity_gal": 49,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 275
+  }
+}

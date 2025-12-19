@@ -1,0 +1,84 @@
+{
+  "name": "Luscombe 8A",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 140.0,
+  "aspect_ratio": 7.5,
+  "CD0": 0.032,
+  "e": 0.78,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [850, 1200],
+      "speeds": [43, 48]
+    },
+    "takeoff": {
+      "weights": [850, 1200],
+      "speeds": [41, 46]
+    },
+    "landing": {
+      "weights": [850, 1200],
+      "speeds": [38, 44]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 58,
+    "best_glide_ratio": 8.5
+  },
+  "engine_options": {
+    "Continental A-65": {
+      "horsepower": 65,
+      "power_curve": {
+        "sea_level_max": 65,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 12500,
+  "Vne": 144,
+  "Vno": 105,
+  "Vfe": {
+    "takeoff": 85,
+    "landing": 75
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [38, 75],
+    "green": [43, 105],
+    "yellow": [105, 144],
+    "red": 144
+  },
+  "empty_weight": 850,
+  "max_weight": 1200,
+  "seats": 2,
+  "cg_range": [18.01, 26.01],
+  "fuel_capacity_gal": 14,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 144
+  }
+}

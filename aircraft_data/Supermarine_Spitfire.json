@@ -1,0 +1,85 @@
+{
+  "name": "Supermarine Spitfire Mk IX",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 242.0,
+  "aspect_ratio": 5.6,
+  "CD0": 0.018,
+  "e": 0.83,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 8.0, "negative": -4.0 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [7000, 7500, 8000],
+      "speeds": [95, 98, 101]
+    },
+    "takeoff": {
+      "weights": [7000, 7500, 8000],
+      "speeds": [92, 95, 98]
+    },
+    "landing": {
+      "weights": [7000, 7500, 8000],
+      "speeds": [85, 88, 91]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 150,
+    "best_glide_ratio": 10.0
+  },
+  "engine_options": {
+    "Rolls-Royce Merlin 66": {
+      "horsepower": 1720,
+      "power_curve": {
+        "sea_level_max": 1720,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 42500,
+  "Vne": 440,
+  "Vno": 380,
+  "Vfe": {
+    "takeoff": 160,
+    "landing": 140
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [85, 140],
+    "green": [95, 380],
+    "yellow": [380, 440],
+    "red": 440
+  },
+  "empty_weight": 5610,
+  "max_weight": 7500,
+  "seats": 1,
+  "cg_range": [90.0, 98.0],
+  "fuel_capacity_gal": 122,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 440
+  }
+}

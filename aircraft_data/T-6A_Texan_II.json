@@ -1,0 +1,92 @@
+{
+  "name": "T-6A Texan II",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 173.5,
+  "aspect_ratio": 7.3,
+  "CD0": 0.03,
+  "e": 0.83,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 7.0, "negative": -3.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 7.0, "negative": -3.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 7.0, "negative": -3.5 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [5800, 6200, 6500],
+      "speeds": [89, 91, 93]
+    },
+    "takeoff": {
+      "weights": [5800, 6200, 6500],
+      "speeds": [85, 87, 89]
+    },
+    "landing": {
+      "weights": [5800, 6200, 6500],
+      "speeds": [80, 82, 84]
+    }
+  },
+  "single_engine_limits": {
+    "Vmca": {
+      "clean_up": 86,
+      "takeoff_up": 86,
+      "landing_down": 86
+    },
+    "Vyse": {},
+    "Vxse": {},
+    "best_glide": 110,
+    "best_glide_ratio": 10.5
+  },
+  "engine_options": {
+    "Pratt & Whitney PT6A-68": {
+      "horsepower": 1100,
+      "power_curve": {
+        "sea_level_max": 1100,
+        "derate_per_1000ft": 0.025
+      }
+    }
+  },
+  "max_altitude": 31000,
+  "Vne": 316,
+  "Vno": 266,
+  "Vfe": {
+    "takeoff": 150,
+    "landing": 120
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 2.1
+  },
+  "arcs": {
+    "white": [80, 120],
+    "green": [89, 266],
+    "yellow": [266, 316],
+    "red": 316
+  },
+  "empty_weight": 4907,
+  "max_weight": 6500,
+  "seats": 2,
+  "cg_range": [133.5, 144.01],
+  "fuel_capacity_gal": 171,
+  "fuel_weight_per_gal": 6.8,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 316
+  }
+}

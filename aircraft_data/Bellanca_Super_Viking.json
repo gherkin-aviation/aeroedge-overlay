@@ -1,0 +1,112 @@
+{
+  "name": "Bellanca Super Viking",
+  "type": "single_engine",
+  "gear_type": "fixed",
+  "engine_count": 1,
+  "wing_area": 180.0,
+  "aspect_ratio": 7.2,
+  "CD0": 0.028,
+  "e": 0.81,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": {
+        "positive": 3.8,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "utility": {
+      "clean": {
+        "positive": 4.4,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "aerobatic": {
+      "clean": {
+        "positive": 6.0,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 0.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 0.0,
+        "negative": -1.0
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [2500, 3000, 3325],
+      "speeds": [54, 57, 61]
+    },
+    "takeoff": {
+      "weights": [2500, 3000, 3325],
+      "speeds": [50, 54, 57]
+    },
+    "landing": {
+      "weights": [2500, 3000, 3325],
+      "speeds": [47, 50, 54]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 90,
+    "best_glide_ratio": 10.5
+  },
+  "engine_options": {
+    "Continental IO-520-K": {
+      "horsepower": 300,
+      "power_curve": {
+        "sea_level_max": 300,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 18800,
+  "Vne": 195,
+  "Vno": 165,
+  "Vfe": {
+    "takeoff": 100,
+    "landing": 90
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [47, 90],
+    "green": [54, 165],
+    "yellow": [165, 195],
+    "red": 195
+  },
+  "empty_weight": 2100,
+  "max_weight": 3325,
+  "seats": 4,
+  "cg_range": [83.01, 92.01],
+  "fuel_capacity_gal": 60,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 195
+  }
+}

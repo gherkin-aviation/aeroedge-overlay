@@ -1,0 +1,84 @@
+{
+  "name": "Champion 7EC",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 170.0,
+  "aspect_ratio": 8.0,
+  "CD0": 0.03,
+  "e": 0.79,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 5.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1000, 1200, 1450],
+      "speeds": [37, 41, 44]
+    },
+    "takeoff": {
+      "weights": [1000, 1200, 1450],
+      "speeds": [34, 38, 42]
+    },
+    "landing": {
+      "weights": [1000, 1200, 1450],
+      "speeds": [31, 36, 40]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 58,
+    "best_glide_ratio": 9.0
+  },
+  "engine_options": {
+    "Continental C90": {
+      "horsepower": 90,
+      "power_curve": {
+        "sea_level_max": 90,
+        "derate_per_1000ft": 0.035
+      }
+    }
+  },
+  "max_altitude": 14000,
+  "Vne": 138,
+  "Vno": 112,
+  "Vfe": {
+    "takeoff": 100,
+    "landing": 90
+  },
+  "CL_max": {
+    "clean": 1.55,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [31, 90],
+    "green": [37, 112],
+    "yellow": [112, 138],
+    "red": 138
+  },
+  "empty_weight": 875,
+  "max_weight": 1450,
+  "seats": 2,
+  "cg_range": [10.5, 18.5],
+  "fuel_capacity_gal": 18,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 138
+  }
+}

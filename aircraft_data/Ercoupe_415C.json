@@ -1,0 +1,84 @@
+{
+  "name": "Ercoupe 415C",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 142.0,
+  "aspect_ratio": 7.5,
+  "CD0": 0.03,
+  "e": 0.75,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.2, "negative": -1.0 },
+      "landing": { "positive": 2.2, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1000, 1150, 1260],
+      "speeds": [45, 48, 50]
+    },
+    "takeoff": {
+      "weights": [1000, 1150, 1260],
+      "speeds": [44, 47, 49]
+    },
+    "landing": {
+      "weights": [1000, 1150, 1260],
+      "speeds": [43, 46, 48]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 9.0
+  },
+  "engine_options": {
+    "Continental C-85-12": {
+      "horsepower": 85,
+      "power_curve": {
+        "sea_level_max": 85,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 13000,
+  "Vne": 140,
+  "Vno": 115,
+  "Vfe": {
+    "takeoff": 100,
+    "landing": 100
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [43, 100],
+    "green": [45, 115],
+    "yellow": [115, 140],
+    "red": 140
+  },
+  "empty_weight": 800,
+  "max_weight": 1260,
+  "seats": 2,
+  "cg_range": [16.01, 21.01],
+  "fuel_capacity_gal": 24,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 140
+  }
+}

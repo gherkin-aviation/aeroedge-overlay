@@ -1,0 +1,84 @@
+{
+  "name": "Remos GX",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 118.4,
+  "aspect_ratio": 9.7,
+  "CD0": 0.028,
+  "e": 0.81,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [900, 1100, 1320],
+      "speeds": [42, 45, 49]
+    },
+    "takeoff": {
+      "weights": [900, 1100, 1320],
+      "speeds": [40, 43, 46]
+    },
+    "landing": {
+      "weights": [900, 1100, 1320],
+      "speeds": [38, 41, 44]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 9.5
+  },
+  "engine_options": {
+    "Rotax 912ULS": {
+      "horsepower": 100,
+      "power_curve": {
+        "sea_level_max": 100,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 18000,
+  "Vne": 146,
+  "Vno": 112,
+  "Vfe": {
+    "takeoff": 93,
+    "landing": 75
+  },
+  "CL_max": {
+    "clean": 1.55,
+    "takeoff": 1.75,
+    "landing": 1.95
+  },
+  "arcs": {
+    "white": [38, 75],
+    "green": [42, 112],
+    "yellow": [112, 146],
+    "red": 146
+  },
+  "empty_weight": 728,
+  "max_weight": 1320,
+  "seats": 2,
+  "cg_range": [9.5, 14.5],
+  "fuel_capacity_gal": 21,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 146
+  }
+}

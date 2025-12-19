@@ -1,0 +1,112 @@
+{
+  "name": "American Champion Scout",
+  "type": "single_engine",
+  "gear_type": "fixed",
+  "engine_count": 1,
+  "wing_area": 180,
+  "aspect_ratio": 6.5,
+  "CD0": 0.033,
+  "e": 0.78,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": {
+        "positive": 3.8,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "utility": {
+      "clean": {
+        "positive": 4.4,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 2.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 2.0,
+        "negative": -1.0
+      }
+    },
+    "aerobatic": {
+      "clean": {
+        "positive": 6.0,
+        "negative": -1.5
+      },
+      "takeoff": {
+        "positive": 0.0,
+        "negative": -1.0
+      },
+      "landing": {
+        "positive": 0.0,
+        "negative": -1.0
+      }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1260, 1800, 2150],
+      "speeds": [43, 48, 52]
+    },
+    "takeoff": {
+      "weights": [1260, 1800, 2150],
+      "speeds": [42, 46, 50]
+    },
+    "landing": {
+      "weights": [1260, 1800, 2150],
+      "speeds": [39, 43, 47]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 70,
+    "best_glide_ratio": 9.0
+  },
+  "engine_options": {
+    "Lycoming O-360-C1G": {
+      "horsepower": 180,
+      "power_curve": {
+        "sea_level_max": 180,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 16000,
+  "Vne": 143,
+  "Vno": 106,
+  "Vfe": {
+    "takeoff": 83,
+    "landing": 79
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [39, 79],
+    "green": [43, 106],
+    "yellow": [106, 143],
+    "red": 143
+  },
+  "empty_weight": 1260,
+  "max_weight": 2150,
+  "seats": 2,
+  "cg_range": [15.01, 19.01],
+  "fuel_capacity_gal": 48,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 143
+  }
+}

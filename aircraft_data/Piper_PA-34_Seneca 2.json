@@ -1,0 +1,153 @@
+{
+  "name": "Piper PA-34 Seneca",
+  "type": "multi_engine",
+  "gear_type": "retractable",
+  "engine_count": 2,
+  "wing_area": 199.0,
+  "aspect_ratio": 7.0,
+  "CD0": 0.03,
+  "e": 0.79,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 3.8, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 0.0, "negative": 0.0 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [3000, 3600, 4200],
+      "speeds": [59, 63, 66]
+    },
+    "takeoff": {
+      "weights": [3000, 3600, 4200],
+      "speeds": [56, 59, 63]
+    },
+    "landing": {
+      "weights": [3000, 3600, 4200],
+      "speeds": [52, 56, 59]
+    }
+  },
+  "single_engine_limits": {
+    "Vmca": {
+      "clean_up": 57,
+      "takeoff_up": 57,
+      "landing_down": 57
+    },
+    "Vyse": {
+      "clean_up": 76,
+      "takeoff_up": 76,
+      "landing_down": 76
+    },
+    "Vxse": {
+      "clean_up": 71,
+      "takeoff_up": 71,
+      "landing_down": 71
+    },
+    "best_glide": 87,
+    "best_glide_ratio": 9.5
+  },
+  "engine_options": {
+    "Lycoming TSIO-360-RB": {
+      "horsepower": 220,
+      "power_curve": {
+        "sea_level_max": 220,
+        "derate_per_1000ft": 0.025
+      },
+      "oei_performance": {
+        "clean_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 87,
+            "rate_of_climb_fpm": 230
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 81,
+            "rate_of_climb_fpm": 180
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 78,
+            "rate_of_climb_fpm": 120
+          }
+        },
+        "takeoff_up": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 85,
+            "rate_of_climb_fpm": 210
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 79,
+            "rate_of_climb_fpm": 150
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 76,
+            "rate_of_climb_fpm": 90
+          }
+        },
+        "landing_down": {
+          "feathered": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 82,
+            "rate_of_climb_fpm": 180
+          },
+          "windmilling": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 76,
+            "rate_of_climb_fpm": 110
+          },
+          "stationary": {
+            "max_power_fraction": 0.5,
+            "best_glide_speed_kias": 73,
+            "rate_of_climb_fpm": 60
+          }
+        }
+      }
+    }
+  },
+  "max_altitude": 25000,
+  "Vne": 177,
+  "Vno": 144,
+  "Vfe": {
+    "takeoff": 106,
+    "landing": 93
+  },
+  "CL_max": {
+    "clean": 1.4,
+    "takeoff": 1.6,
+    "landing": 1.8
+  },
+  "arcs": {
+    "white": [52, 93],
+    "green": [59, 144],
+    "yellow": [144, 177],
+    "red": 177
+  },
+  "empty_weight": 2880,
+  "max_weight": 4200,
+  "seats": 6,
+  "cg_range": [83.01, 93.01],
+  "fuel_capacity_gal": 123,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 177
+  }
+}

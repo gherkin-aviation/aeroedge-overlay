@@ -1,0 +1,357 @@
+:root {
+  --blue-primary: #00A6FB;
+  --blue-dark: #005F8C;
+  --orange-primary: #FF4B00;
+  --orange-dark: #CC3A00;
+  --gray-bg: #f7f9fc;
+  --text-dark: #1b1e23;
+  --white: #ffffff;
+  --gray-border: #d0d6e1;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  --sidebar-width: 300px;
+}
+
+/* === Global Reset === */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  background-color: var(--gray-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* === Typography === */
+h1,
+h2,
+h3 {
+  color: var(--blue-dark);
+  margin-bottom: 12px;
+}
+
+a {
+  color: var(--blue-primary);
+  text-decoration: none;
+}
+
+.input-label,
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* === Header Banner === */
+.banner-header {
+  width: 100%;
+  background-color: #010c1f;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-inner {
+  padding: 12px 0;
+}
+
+.banner-logo {
+  height: 100px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* === Disclaimer Banner + Legal Links === */
+.disclaimer-banner {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px 15px;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 16px 0 16px;
+}
+
+.legal-links-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0 10px 0;
+  line-height: 1.2;
+}
+
+.legal-link {
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--blue-primary);
+}
+
+.legal-separator {
+  margin: 0 6px;
+  color: #999;
+  user-select: none;
+}
+
+/* === Modal Styling (dbc.Modal uses Bootstrap structure) === */
+.modal-dialog.aeroedge-modal {
+  max-width: 900px;
+}
+
+.modal .modal-dialog.aeroedge-modal {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.modal-dialog.aeroedge-modal .modal-body {
+  padding: 24px 28px;
+}
+
+@media (max-width: 768px) {
+  .modal .modal-dialog.aeroedge-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* === Layout Containers === */
+.full-height-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-row {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.resizable-sidebar {
+  width: 360px;
+  min-width: 260px;
+  max-width: 600px;
+  resize: horizontal;
+  overflow-y: auto;
+  padding: 16px;
+  background-color: var(--gray-bg);
+  border-right: 2px solid var(--gray-border);
+  box-sizing: border-box;
+}
+
+.graph-column {
+  flex: 1 1 auto;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Graph === */
+.graph-panel {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+}
+
+.graph-panel > .dash-graph {
+  height: 100%;
+  width: 100%;
+}
+
+/* === Form Elements === */
+.input-small {
+  width: 80px;
+}
+
+.input-large {
+  width: 100%;
+  max-width: 320px;
+}
+
+.dropdown,
+.dropdown-small {
+  min-width: 240px;
+  max-width: 280px;
+  width: 100%;
+}
+
+.d-flex-align {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.radio-inline-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.dash-checklist label,
+.dash-radio-items label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 6px 0;
+  gap: 8px;
+  color: var(--text-dark);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--blue-primary);
+}
+
+input,
+select,
+.dash-dropdown,
+.Select-control,
+.Select-menu-outer {
+  padding: 6px 8px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+/* === Airport Search Results (global, not mobile-only) === */
+.search-results-box {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.airport-result {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.airport-result:hover {
+  background-color: #f0f0f0;
+}
+
+/* === Buttons (DO NOT override Bootstrap globally) === */
+.green-button {
+  background-color: var(--orange-primary);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.green-button:hover {
+  background-color: var(--orange-dark);
+}
+
+/* Optional: secondary blue button you used in code */
+.blue-button {
+  background-color: var(--blue-primary);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+  margin-top: 10px;
+}
+
+.blue-button:hover {
+  filter: brightness(0.92);
+}
+
+/* === Utility === */
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.weight-box {
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.graph-accent {
+  background: linear-gradient(90deg, var(--blue-primary), var(--orange-primary));
+  height: 4px;
+  border-radius: 2px;
+  margin: 16px 0;
+}
+
+.footer {
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+
+/* === Responsive (Mobile) === */
+@media (max-width: 768px) {
+  .main-row {
+    flex-direction: column;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .full-height-container {
+    height: auto;
+  }
+
+  .resizable-sidebar {
+    width: 100%;
+    max-width: 100%;
+    resize: none;
+    border-right: none;
+    padding: 12px;
+  }
+
+  .graph-column {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    flex-grow: 1;
+    overflow-x: auto;
+  }
+
+  .graph-panel {
+    min-width: 640px;
+    min-height: 480px;
+    width: 640px;
+    height: 480px;
+  }
+
+  .green-button,
+  .blue-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

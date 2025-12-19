@@ -1,0 +1,91 @@
+{
+  "name": "Diamond DA20-C1",
+  "type": "single_engine",
+  "engine_count": 1,
+  "wing_area": 125.0,
+  "aspect_ratio": 10,
+  "CD0": 0.032,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 0.0, "negative": -1.0 },
+      "landing": { "positive": 0.0, "negative": -1.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [1140, 1350, 1600],
+      "speeds": [48, 51, 54]
+    },
+    "takeoff": {
+      "weights": [1140, 1350, 1600],
+      "speeds": [45, 48, 52]
+    },
+    "landing": {
+      "weights": [1140, 1350, 1600],
+      "speeds": [42, 46, 50]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 60,
+    "best_glide_ratio": 9.2
+  },
+  "engine_options": {
+    "Continental IO-240-B": {
+      "horsepower": 125,
+      "power_curve": {
+        "sea_level_max": 125,
+        "derate_per_1000ft": 0.03
+      }
+    },
+    "Rotax 912iS (Experimental)": {
+      "horsepower": 100,
+      "power_curve": {
+        "sea_level_max": 100,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 13120,
+  "Vne": 164,
+  "Vno": 131,
+  "Vfe": {
+    "takeoff": 110,
+    "landing": 98
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [42, 98],
+    "green": [48, 131],
+    "yellow": [131, 164],
+    "red": 164
+  },
+  "empty_weight": 1140,
+  "max_weight": 1764,
+  "seats": 2,
+  "cg_range": [8.01, 12.5],
+  "fuel_capacity_gal": 24,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 160
+  }
+}

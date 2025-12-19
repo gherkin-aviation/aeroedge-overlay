@@ -1,0 +1,85 @@
+{
+  "name": "Grumman F8F-2 Bearcat",
+  "type": "single_engine",
+  "gear_type": "retractable",
+  "engine_count": 1,
+  "wing_area": 244.0,
+  "aspect_ratio": 5.3,
+  "CD0": 0.018,
+  "e": 0.82,
+  "configuration_options": {
+    "flaps": ["clean", "takeoff", "landing"]
+  },
+  "G_limits": {
+    "normal": {
+      "clean": { "positive": 4.4, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "utility": {
+      "clean": { "positive": 6.0, "negative": -1.5 },
+      "takeoff": { "positive": 2.0, "negative": -1.0 },
+      "landing": { "positive": 2.0, "negative": -1.0 }
+    },
+    "aerobatic": {
+      "clean": { "positive": 8.0, "negative": -4.0 },
+      "takeoff": { "positive": 0.0, "negative": 0.0 },
+      "landing": { "positive": 0.0, "negative": 0.0 }
+    }
+  },
+  "stall_speeds": {
+    "clean": {
+      "weights": [12000, 13000, 13460],
+      "speeds": [95, 98, 101]
+    },
+    "takeoff": {
+      "weights": [12000, 13000, 13460],
+      "speeds": [92, 95, 98]
+    },
+    "landing": {
+      "weights": [12000, 13000, 13460],
+      "speeds": [85, 88, 91]
+    }
+  },
+  "single_engine_limits": {
+    "best_glide": 150,
+    "best_glide_ratio": 10.0
+  },
+  "engine_options": {
+    "Pratt & Whitney R-2800-30W": {
+      "horsepower": 2250,
+      "power_curve": {
+        "sea_level_max": 2250,
+        "derate_per_1000ft": 0.03
+      }
+    }
+  },
+  "max_altitude": 40800,
+  "Vne": 455,
+  "Vno": 380,
+  "Vfe": {
+    "takeoff": 165,
+    "landing": 150
+  },
+  "CL_max": {
+    "clean": 1.5,
+    "takeoff": 1.7,
+    "landing": 1.9
+  },
+  "arcs": {
+    "white": [85, 150],
+    "green": [95, 380],
+    "yellow": [380, 455],
+    "red": 455
+  },
+  "empty_weight": 7070,
+  "max_weight": 13460,
+  "seats": 1,
+  "cg_range": [92.0, 100.0],
+  "fuel_capacity_gal": 535,
+  "fuel_weight_per_gal": 6.0,
+  "prop_thrust_decay": {
+    "T_static_factor": 2.6,
+    "V_max_kts": 455
+  }
+}
