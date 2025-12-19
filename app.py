@@ -61,6 +61,8 @@ app = dash.Dash(
     suppress_callback_exceptions=True,
     prevent_initial_callbacks=True
 )
+server = app.server
+
 app.title = "Maneuver Overlay Tool | AeroEdge"
 
 def legal_banner_block():
@@ -1329,19 +1331,26 @@ def autofill_engineout_touchdown_elev(td_data, maneuver):
     return int(round(elev))
 
 def get_elevation(lat, lon):
+    if lat is None or lon is None:
+        return None
+
     try:
-        if lat is None or lon is None:
+        url = "https://api.open-meteo.com/v1/elevation"
+        r = requests.get(url, params={"latitude": lat, "longitude": lon}, timeout=5)
+        r.raise_for_status()
+        data = r.json()
+
+        elev_m = data.get("elevation")
+        if isinstance(elev_m, list) and elev_m:
+            elev_m = elev_m[0]
+
+        if elev_m is None:
             return None
-        url = f"https://api.open-meteo.com/v1/elevation?latitude={lat}&longitude={lon}"
-        response = requests.get(url)
-        if response.ok:
-            data = response.json()
-            elevation_list = data.get("elevation")
-            elevation = elevation_list[0] if elevation_list else None
-            return round(elevation * 3.281) if elevation is not None else None
+
+        return int(round(float(elev_m) * 3.28084))
     except Exception as e:
         print(f"❌ Open-Meteo elevation lookup failed: {e}")
-    return None
+        return None
 
 @app.callback(
     Output("click_debug", "children"),
@@ -2265,4 +2274,4 @@ def toggle_legal_modals(open_disc, close_disc, open_terms, close_terms, disc_ope
     return no_update, no_update
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run_server(debug=True)
