@@ -262,14 +262,14 @@ app.layout = html.Div(className="full-height-container", children=[
                     {"label": "Impossible Turn", "value": "impossible_turn"},
                     {"label": "Power-Off 180", "value": "poweroff180"},
                     {"label": "Engine-Out Glide Simulation", "value": "engineout"},
-                    #{"label": "Steep Turns", "value": "steep_turn"},
-                    #{"label": "Chandelle", "value": "chandelle"},
-                    #{"label": "Lazy Eight", "value": "lazy8"},
-                    #{"label": "Steep Spiral", "value": "steep_spiral"},
-                    #{"label": "S-Turns", "value": "sturns"},
-                    #{"label": "Turns Around a Point", "value": "turns_point"},
-                    #{"label": "Rectangular Course", "value": "rect_course"},
-                    #{"label": "Eights on Pylons", "value": "pylons"},
+                    {"label": "Steep Turns", "value": "steep_turn"},
+                    {"label": "Chandelle", "value": "chandelle"},
+                    {"label": "Lazy Eight", "value": "lazy8"},
+                    {"label": "Steep Spiral", "value": "steep_spiral"},
+                    {"label": "S-Turns", "value": "sturns"},
+                    {"label": "Turns Around a Point", "value": "turns_point"},
+                    {"label": "Rectangular Course", "value": "rect_course"},
+                    {"label": "Eights on Pylons", "value": "pylons"},
                 ]
             ),
 
@@ -295,7 +295,7 @@ app.layout = html.Div(className="full-height-container", children=[
                     dl.Map(
                         id="map",
                         center=[33.0635, -80.2795],
-                        zoom=16,
+                        zoom=13.5,
                         style={"width": "100%", "height": "100%"},
                         children=[
                             dl.TileLayer(),
@@ -364,7 +364,6 @@ app.layout = html.Div(className="full-height-container", children=[
 # === Maneuver UI Layouts ===
 def impossible_turn_layout():
     return [
-        html.H3("Impossible Turn", className="section-title"),
 
         html.Div(
             [
@@ -539,17 +538,16 @@ def poweroff180_layout(default_elev=None):
         html.Label("Start Distance From Touchdown (NM)", className="input-label"),
         dcc.Slider(
             id="poweroff180-start-distance-nm",
-            min=0.5,
-            max=3.0,
-            step=0.25,
-            value=1.0,
+            min=0.3,
+            max=2.5,
+            step=0.1,
+            value=0.8,
             marks={
                 0.5: "0.5",
                 1.0: "1.0",
                 1.5: "1.5",
                 2.0: "2.0",
                 2.5: "2.5",
-                3.0: "3.0",
             },
             tooltip={"always_visible": True}
         ),
@@ -579,8 +577,6 @@ def poweroff180_layout(default_elev=None):
 
 def engineout_layout():
     return [
-
-        html.H3("Engine-Out Glide Simulation", className="section-title"),
 
         # ---- Configuration Inputs ----
         html.Label("Flap Setting", className="input-label"),
@@ -1038,6 +1034,29 @@ def update_total_weight_display(ac_name, occupants, occupant_wt, fuel_gal):
 
 
 @app.callback(
+    Output("map", "center"),
+    Output("env-airport-agl", "children"),
+    Output("selected-airport-id", "data"),
+    Output("airport-search-input", "value"),
+    Input({"type": "airport-result", "index": ALL}, "n_clicks"),
+    prevent_initial_call=True
+)
+def handle_airport_result_click(n_clicks_list):
+    if not ctx.triggered_id or not isinstance(ctx.triggered_id, dict):
+        raise PreventUpdate
+
+    airport_id = ctx.triggered_id.get("index")
+    ap = next((a for a in airport_data if a.get("id") == airport_id), None)
+    if not ap:
+        raise PreventUpdate
+
+    lat, lon = ap["lat"], ap["lon"]
+    elev = ap.get("elevation_ft", "---")
+
+    # Fill the input with the selected airport ID
+    return [lat, lon], f"{elev} ft", airport_id, airport_id
+
+@app.callback(
     Output("airport-search-results", "children"),
     Input("airport-search-input", "value")
 )
@@ -1045,10 +1064,18 @@ def search_airport_database(query):
     if not query or len(query.strip()) < 2:
         return []
 
-    query = query.lower()
+    q = query.strip().lower()
+
+    # If the input is already an exact airport ID, hide the dropdown.
+    exact = next((ap for ap in airport_data if ap.get("id", "").lower() == q), None)
+    if exact is not None:
+        return []
+
     matches = []
     for ap in airport_data:
-        if query in ap["id"].lower() or query in ap["name"].lower():
+        ap_id = ap.get("id", "").lower()
+        ap_name = ap.get("name", "").lower()
+        if q in ap_id or q in ap_name:
             matches.append(ap)
         if len(matches) >= 10:
             break
@@ -1063,30 +1090,7 @@ def search_airport_database(query):
         for ap in matches
     ]
 
-@app.callback(
-    Output("map", "center"),
-    Output("env-airport-agl", "children"),
-    Output("selected-airport-id", "data"),
-    Input({"type": "airport-result", "index": ALL}, "n_clicks"),
-    prevent_initial_call=True
-)
-def handle_airport_result_click(n_clicks_list):
-    ctx = dash.callback_context
-    if not ctx.triggered:
-        raise PreventUpdate
 
-    triggered = ctx.triggered_id
-    if not triggered or not isinstance(triggered, dict):
-        raise PreventUpdate
-
-    airport_id = triggered["index"]
-    ap = next((a for a in airport_data if a["id"] == airport_id), None)
-    if not ap:
-        raise PreventUpdate
-
-    lat, lon = ap["lat"], ap["lon"]
-    elev = ap.get("elevation_ft", "---")
-    return [lat, lon], f"{elev} ft", airport_id
 
 # === Maneuver Dispatcher ===
 @app.callback(
@@ -1249,13 +1253,15 @@ from dash.exceptions import PreventUpdate
 @app.callback(
     Output({"type": "point-store", "m_id": ALL, "role": ALL}, "data", allow_duplicate=True),
     Output("active-click-target", "data", allow_duplicate=True),
+    Output("layer", "children", allow_duplicate=True),
     Input("map", "clickData"),
     State("active-click-target", "data"),
     State({"type": "point-store", "m_id": ALL, "role": ALL}, "id"),
     State({"type": "point-store", "m_id": ALL, "role": ALL}, "data"),
+    State("layer", "children"),
     prevent_initial_call=True
 )
-def write_point_to_scoped_store(click, target, store_ids, store_data):
+def write_point_to_scoped_store(click, target, store_ids, store_data, layer_children):
     if not click or "latlng" not in click or not isinstance(target, dict):
         raise PreventUpdate
 
@@ -1270,20 +1276,53 @@ def write_point_to_scoped_store(click, target, store_ids, store_data):
 
     new_pt = {"lat": lat, "lon": lon, "elevation_ft": elev}
 
+    # ----- write to the correct scoped store -----
     updated = list(store_data)  # same order as store_ids
     wrote = False
     for i, sid in enumerate(store_ids):
-        if sid.get("m_id") == m_id and sid.get("role") == role:
+        if isinstance(sid, dict) and sid.get("m_id") == m_id and sid.get("role") == role:
             updated[i] = new_pt
             wrote = True
             break
 
     if not wrote:
-        # Nothing matched; do not clear target, do not mutate anything
         raise PreventUpdate
 
+    # ----- immediate marker on the map -----
+    layer_children = layer_children or []
+
+    marker_id = {"type": "pt-marker", "m_id": m_id, "role": role}
+
+    kept = []
+    for child in layer_children:
+        try:
+            # Drop any existing marker for this exact (m_id, role)
+            if getattr(child, "id", None) != marker_id:
+                kept.append(child)
+        except Exception:
+            kept.append(child)
+
+    # Color convention
+    color = "green"
+    if role == "touchdown":
+        color = "red"
+    elif role in ("impact", "failure", "engine_failure"):
+        color = "black"
+
+    marker = dl.CircleMarker(
+        id=marker_id,
+        center=[lat, lon],
+        radius=7,
+        color=color,
+        fill=True,
+        fillOpacity=1.0,
+        children=dl.Tooltip(f"{m_id} {role}: {lat:.5f}, {lon:.5f}")
+    )
+
+    new_layer = kept + [marker]
+
     # Clear target after one successful click so extra clicks don’t overwrite
-    return updated, None
+    return updated, None, new_layer
 
 @app.callback(
     Output({"type": "click-status", "m_id": MATCH}, "children", allow_duplicate=True),
@@ -1502,7 +1541,24 @@ def draw_impossible_turn(
         reason       = meta.get("reason", "unknown")
         min_required = meta.get("min_feasible_alt_agl", None)
         bank_deg     = meta.get("bank_deg", None)
+        # Distance (NM): failure point -> impact (if any) else -> end of path
+        dist_nm = None
+        try:
+            if impact and isinstance(impact, (list, tuple)) and len(impact) == 2:
+                end_pt = GeoPoint(float(impact[0]), float(impact[1]))
+                dist_nm = geo_distance(failure_pt, end_pt).nm
+                dist_label = "Failure distance to impact"
+            else:
+                end_lat, end_lon = path[-1][0], path[-1][1]
+                end_pt = GeoPoint(float(end_lat), float(end_lon))
+                dist_nm = geo_distance(failure_pt, end_pt).nm
+                dist_label = "Failure distance to touchdown"
+        except Exception:
+            dist_nm = None
+            dist_label = "Distance"
 
+        dist_txt = f"{dist_label}: {dist_nm:.2f} NM" if isinstance(dist_nm, (int, float)) else f"{dist_label}: n/a"
+        
         # Markers
         start_marker = dl.CircleMarker(
             center=[failure_pt.latitude, failure_pt.longitude],
@@ -1608,12 +1664,14 @@ def draw_impossible_turn(
         if isinstance(min_required, (int, float)):
             result = (
                 f"Recommended constant bank: {bank_txt}. "
-                f"Minimum feasible failure altitude (AGL): {float(min_required):.0f} ft"
+                f"Minimum failure altitude (AGL): {float(min_required):.0f} ft. "
+                f"{dist_txt}."
             )
         else:
             result = (
                 f"Recommended constant bank: {bank_txt}. "
-                f"Minimum feasible failure altitude (AGL): not found in search range."
+                f"Minimum failure altitude (AGL): not found in search range. "
+                f"{dist_txt}."
             )
 
         return elements, bounds, status, result
@@ -2274,4 +2332,4 @@ def toggle_legal_modals(open_disc, close_disc, open_terms, close_terms, disc_ope
     return no_update, no_update
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
